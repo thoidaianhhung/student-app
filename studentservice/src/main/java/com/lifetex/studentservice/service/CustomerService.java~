@@ -1,0 +1,38 @@
+package com.lifetex.studentservice.service;
+
+
+import com.lifetex.studentservice.dto.StudentDto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
+
+public interface CustomerService {
+
+
+    /**
+     * Retrieves a list of all users.
+     *
+     * @return a list of CustomerDto objects representing all users
+     */
+    Page<StudentDto> findAllStudents(Pageable pageable);
+
+    /**
+     * @param mobileNumber - Input Mobile Number
+     * @return User Details based on a given mobileNumber
+     */
+    Stu findByMobileNumber(String mobileNumber);
+
+
+    CustomerDto createUser(CustomerCreateForm customerCreateForm);
+
+    ResponseEntity<LoginResponseDTO> loginUser(LoginRequestForm loginRequestForm);
+
+
+    /**
+     * @param id, customerUpdateForm - CustomerDto Object
+     * @return update of User details
+     */
+    CustomerDto updateUser(Long id, CustomerUpdateForm customerUpdateForm);
+
+    CustomerDto readCustomerById(Long customerId);
+}

@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "cca63830-ab7d-4a57-baec-09e3dfaf31e3",
+		"name": "Student Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29791500"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"Nguyen Van Hung\",\r\n    \"birthDate\" : \"23/03/1995\",\r\n    \"gender\" : \"NAM\",\r\n    \"pwd\" : \"1234567\",\r\n    \"email\" : \"hungnv@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Students",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJWVEkgQmFuayIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiaHVuZ252QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzMwOTkzMDQyLCJleHAiOjE3MzA5OTMxNjJ9.mIWlI9uFgIMG4urv39xsKmYWUD6PhHzJQ427AbL8UrQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Student By Email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJWVEkgQmFuayIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiaHVuZ252QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzMwOTkzMjgxLCJleHAiOjE3MzA5OTM0MDF9.UE05-msOgfokeNatrW-haCWLdOF53ur-aICBp8GCBm8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students/hungnv@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"hungnv@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJWVEkgQmFuayIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiaHVuZ252QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzMwOTkzNTI3LCJleHAiOjE3MzA5OTM2NDd9.uNgkMqTgO8IMmv1tQxrt6vjzGVKlj15Kpenp-JSczPs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"Nguyen Duc Cuong\",\r\n    \"birthDate\" : \"23/03/1995\",\r\n    \"gender\" : \"NAM\",\r\n    \"pwd\" : \"1234567\",\r\n    \"email\" : \"cuongdn@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personal",
+			"item": [
+				{
+					"name": "Create Personal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJWVEkgQmFuayIsInN1YiI6IkpXVCBUb2tlbiIsInVzZXJuYW1lIjoiaHVuZ252QGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9VU0VSIiwiaWF0IjoxNzMwOTk0ODc1LCJleHAiOjE3MzA5OTQ5OTV9.isw6FzGXi3at7CeO-RgFz7P81Vp2xM3IomuGKpnQd0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"Nguyen Van Hung\",\r\n    \"relationship\" : \"BO\",\r\n    \"birthDate\" : \"23/03/1995\",\r\n    \"gender\" : \"NAM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/students/1/personals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"students",
+								"1",
+								"personals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Student Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Personal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personals/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
