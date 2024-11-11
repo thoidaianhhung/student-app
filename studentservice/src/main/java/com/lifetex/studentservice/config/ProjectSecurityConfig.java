@@ -64,8 +64,8 @@ public class ProjectSecurityConfig {
     @Bean
     public AuthenticationManager authenticationManager(UserDetailsService userDetailsService,
                                                        PasswordEncoder passwordEncoder) {
-        VTIBankUsernamePwdAuthenticationProvider authenticationProvider =
-                new VTIBankUsernamePwdAuthenticationProvider(userDetailsService, passwordEncoder);
+        UsernamePwdAuthenticationProvider authenticationProvider =
+                new UsernamePwdAuthenticationProvider(userDetailsService, passwordEncoder);
         ProviderManager providerManager = new ProviderManager(authenticationProvider);
         providerManager.setEraseCredentialsAfterAuthentication(false);
         return providerManager;

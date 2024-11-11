@@ -55,7 +55,7 @@ public class StudentServiceImpl implements StudentService {
             String secret = env.getProperty(ApplicationConstants.JWT_SECRET_KEY,
                     ApplicationConstants.JWT_SECRET_DEFAULT_VALUE);
             SecretKey secretKey = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
-            jwt = Jwts.builder().issuer("VTI Bank").subject("JWT Token")
+            jwt = Jwts.builder().issuer("NGUYEN VAN HUNG").subject("JWT Token")
                     .claim("username", authenticationResponse.getName())
                     .claim("authorities", authenticationResponse.getAuthorities().stream().map(
                             GrantedAuthority::getAuthority).collect(Collectors.joining(",")))
